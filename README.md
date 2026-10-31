@@ -34,6 +34,8 @@ Manage notification recipients, spam protection, submissions, and account limits
 
 ## GitHub Pages deployment
 
+The final 83-second product film is hosted with the site at `assets/media/shiprooms-film.mp4`, linked from the hero and shown in the `#film` section. Playback is visitor initiated (`preload="none"`), with native controls, inline mobile playback, English captions, and an expandable transcript. `film.css` and `film.js` provide the glass frame and initial play button. Without JavaScript, the native player remains usable. The video is the approved V7 export, with the website brand mark throughout and the unchanged Laurel narration/music mix. The poster is its opening masthead; no external video host or cookies are required.
+
 The `.github/workflows/deploy-pages.yml` workflow checks and builds the site on every push to `main`, then deploys only `dist/` to GitHub Pages. It can also be run manually from the repository’s Actions tab. No third-party hosting account or deployment secret is needed.
 
 Repository Settings → Pages → Build and deployment should use **GitHub Actions** as the source. The production URL is **https://shiprooms.ai/**; GitHub manages its TLS certificate, and **Enforce HTTPS** is enabled.

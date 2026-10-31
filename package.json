@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node scripts/dev.mjs",
     "build": "node scripts/build.mjs",
-    "check": "node --check assets/site.js && node --check assets/interest.js && node --check scripts/dev.mjs && node --check scripts/build.mjs",
+    "check": "node --check assets/site.js && node --check assets/interest.js && node --check assets/film.js && node --check scripts/dev.mjs && node --check scripts/build.mjs",
     "test": "node --test tests/*.test.mjs"
   }
 }
