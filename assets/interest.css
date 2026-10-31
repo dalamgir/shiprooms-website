@@ -1,0 +1,38 @@
+.interest-section { display: grid; grid-template-columns: .9fr 1.1fr; gap: 54px; align-items: start; padding: 60px 48px; text-align: left; }
+.interest-intro { padding-top: 20px; }
+.interest-intro .eyebrow { justify-content: flex-start; font-size: 8px; letter-spacing: 1.5px; }
+.interest-intro h2 { font-size: clamp(32px, 3.4vw, 45px); letter-spacing: -1.8px; }
+.interest-intro p { max-width: 350px; color: #b7b8c0; font-size: 14px; line-height: 1.85; margin: 24px 0 28px; }
+.interest-note { display: flex; align-items: center; gap: 9px; color: #a4a6ae; font-size: 10px; line-height: 1.7; }
+.interest-note .tiny-orbit { flex-shrink: 0; }
+.interest-card { min-width: 0; padding: 28px; border: 1px solid #ffffff30; border-radius: 18px; background: linear-gradient(135deg, #ffffff14, #ffffff04); box-shadow: inset 0 1px 0 #ffffff38, 0 18px 44px #0003; backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px); }
+.interest-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.interest-heading h3 { font: 500 20px/1.4 var(--display); letter-spacing: -.5px; }
+.interest-heading>span { flex-shrink: 0; border: 1px solid #ffffff26; border-radius: 4px; padding: 5px 6px; font-size: 6px; letter-spacing: 1px; color: #b7b8bf; }
+.interest-card .interest-hint { color: #b2b4bc; font-size: 11px; margin: 8px 0 25px; line-height: 1.7; }
+.interest-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 14px; }
+.interest-field { min-width: 0; }
+.interest-wide { grid-column: 1 / -1; }
+.interest-field label { display: block; color: #e1e1e7; font-size: 11px; font-weight: 500; margin-bottom: 8px; line-height: 1.6; }
+.interest-field label span { font-size: 10px; font-weight: 400; color: #a6a8b0; }
+.interest-field input, .interest-field select, .interest-field textarea { display: block; width: 100%; min-height: 45px; border: 1px solid #ffffff30; border-radius: 8px; padding: 11px 12px; background: #10111360; box-shadow: inset 0 1px 3px #0002; color: #f1f1f2; font: 400 14px/1.5 var(--font); transition: border-color .2s, background .2s; }
+.interest-field textarea { min-height: 90px; resize: vertical; }
+.interest-field input::placeholder, .interest-field textarea::placeholder { color: #9799a3; opacity: 1; }
+.interest-field select { padding-right: 24px; }
+.interest-field option { background: #25262a; color: #f1f1f2; }
+.interest-field input:focus-visible, .interest-field select:focus-visible, .interest-field textarea:focus-visible { outline: 2px solid #dedee4; outline-offset: 3px; border-color: #ffffff80; background: #10111390; }
+.interest-card .interest-privacy { font-size: 10px; line-height: 1.8; color: #a9abb4; margin: 20px 0; }
+.interest-submit { width: 100%; min-height: 48px; }
+.interest-submit .interest-submit-label { font-size: 13px; }
+.interest-submit:disabled { cursor: wait; opacity: .65; transform: none; }
+.interest-card .interest-status { font-size: 12px; color: #cdced5; line-height: 1.7; margin: 14px 0 0; }
+.interest-status:empty { display: none; }
+.interest-card .interest-status.is-error { padding: 12px; border: 1px solid #ffffff50; border-radius: 8px; background: #ffffff0a; color: #f1f1f2; }
+.interest-success { padding: 44px 0 20px; }
+.interest-success-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid #ffffff60; background: #ffffff14; font-size: 20px; margin-bottom: 20px; }
+.interest-success h3 { font: 500 27px/1.3 var(--display); letter-spacing: -.8px; }
+.interest-success p { font-size: 14px; color: #c0c1c8; margin: 16px 0 28px; }
+.interest-noscript { font-size: 12px; }
+@media (max-width: 1100px) { .interest-section { gap: 30px; padding: 40px 28px; } .interest-card { padding: 24px; } }
+@media (max-width: 900px) { .interest-section { grid-template-columns: 1fr; gap: 32px; } .interest-intro { padding-top: 0; } .interest-intro p { max-width: 520px; margin-bottom: 18px; } }
+@media (max-width: 600px) { .interest-section { padding: 32px 18px 18px; } .interest-intro h2 { font-size: 33px; } .interest-intro p { font-size: 13px; } .interest-card { padding: 22px 16px; } .interest-fields { grid-template-columns: 1fr; } .interest-field input, .interest-field select, .interest-field textarea { font-size: 16px; } .interest-heading h3 { font-size: 19px; } .interest-field label { font-size: 12px; } .interest-card .interest-privacy { font-size: 11px; } }

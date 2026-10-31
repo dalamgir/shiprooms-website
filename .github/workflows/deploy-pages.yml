@@ -24,6 +24,8 @@ jobs:
           node-version: '24'
       - name: Check source
         run: npm run check
+      - name: Test registration handling
+        run: npm test
       - name: Build static site
         run: npm run build
       - name: Upload site

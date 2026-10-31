@@ -18,6 +18,7 @@ Open http://127.0.0.1:4173. Set `PORT` to use another port.
 
 ```sh
 npm run check
+npm test
 npm run build
 ```
 
@@ -25,7 +26,11 @@ The build copies the website into `dist/`, ready for a static host. `index.html`
 
 ## Early access
 
-Set `SIGNUP_URL` at the top of `assets/site.js` to a published HTTPS form URL. This changes the header and hero buttons to early-access links and reveals the closing signup button. Without a URL, the site presents an honest coming-soon state and collects no personal data.
+The header and hero link to the registration form at `#early-access`. Only email is required; name, company, discipline, and a short note are optional. The form uses Formspree to store registrations and notify the verified recipient configured in the Formspree dashboard. The `email` field sets the notification's Reply-To address.
+
+The public endpoint belongs in the `action` attribute of `#interest-form` in `index.html`; no account credentials or API secrets belong in this repository. `assets/interest.js` submits asynchronously, prevents duplicate requests while sending, and shows confirmation only after Formspree accepts the submission. Errors preserve the visitor's entries for retry. `assets/interest.css` contains the form styling.
+
+Manage notification recipients, spam protection, submissions, and account limits in Formspree. Test delivery after changing the endpoint or notification settings. The free plan has a monthly submission allowance and limited dashboard retention; monitor usage before a launch campaign. Submitting this form does not create a product account or send an automatic confirmation email.
 
 ## GitHub Pages deployment
 

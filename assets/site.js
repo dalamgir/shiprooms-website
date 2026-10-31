@@ -1,6 +1,3 @@
-// Set to your published signup form URL when ready (for example, a Tally form).
-const SIGNUP_URL = '';
-
 const stages = {
   "define": {
     "eyebrow": "01 — DEFINE",
@@ -206,16 +203,4 @@ tabs.forEach((tab, index) => {
   });
 });
 
-if (SIGNUP_URL) {
-  const url = new URL(SIGNUP_URL);
-  if (url.protocol === 'https:') {
-    document.querySelectorAll('[data-signup-link]').forEach(link => {
-      link.href = url.href;
-      link.hidden = false;
-    });
-    document.getElementById('signup-pending').hidden = true;
-    document.querySelector('.header-cta').firstChild.textContent = 'Get early access ';
-    document.querySelector('.hero-actions .button').firstChild.textContent = 'Get early access ';
-  }
-}
 document.getElementById('year').textContent = new Date().getFullYear();
