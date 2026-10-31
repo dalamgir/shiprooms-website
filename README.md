@@ -1,0 +1,33 @@
+# Shiprooms
+
+A responsive coming-soon website for Shiprooms. Graphite, silver, translucent glass, and a product narrative built around shared context and the full software lifecycle.
+
+## Local development
+
+Requires Node.js 20 or newer. No dependencies to install.
+
+```sh
+npm run dev
+```
+
+Open http://127.0.0.1:4173. Set `PORT` to use another port.
+
+```sh
+npm run check
+npm run build
+```
+
+The build copies the website into `dist/`, ready for a static host. `index.html` is the page source, `assets/styles.css` contains the visual system, and `assets/site.js` drives the accessible workflow tabs.
+
+## Early access
+
+Set `SIGNUP_URL` at the top of `assets/site.js` to a published HTTPS form URL. This changes the header and hero buttons to early-access links and reveals the closing signup button. Without a URL, the site presents an honest coming-soon state and collects no personal data.
+
+## Design and accessibility
+
+- Responsive layouts for mobile, tablet, and desktop.
+- Keyboard-operated workflow tabs, visible focus states, and a skip link.
+- Reduced-motion support; no scroll hijacking or automatic tab switching.
+- All product examples are illustrative concepts, not claims of a released application.
+- Google Fonts supplies Manrope and DM Sans, with system fallbacks.
+- No analytics or tracking scripts.

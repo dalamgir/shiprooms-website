@@ -1,0 +1,11 @@
+{
+  "name": "shiprooms-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node --check assets/site.js && node --check scripts/dev.mjs && node --check scripts/build.mjs"
+  }
+}
