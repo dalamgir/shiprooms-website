@@ -31,7 +31,9 @@ Set `SIGNUP_URL` at the top of `assets/site.js` to a published HTTPS form URL. T
 
 The `.github/workflows/deploy-pages.yml` workflow checks and builds the site on every push to `main`, then deploys only `dist/` to GitHub Pages. It can also be run manually from the repository’s Actions tab. No third-party hosting account or deployment secret is needed.
 
-Repository Settings → Pages → Build and deployment should use **GitHub Actions** as the source. The default project URL is https://dalamgir.github.io/shiprooms-website/.
+Repository Settings → Pages → Build and deployment should use **GitHub Actions** as the source. The production URL is **https://shiprooms.ai/**; GitHub manages its TLS certificate, and **Enforce HTTPS** is enabled.
+
+DNS is managed at GoDaddy. The apex (`@`) has four A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`. The `www` CNAME points to `dalamgir.github.io`. GitHub redirects `www` to the apex domain. Preserve these records when changing other domain services.
 
 HTML asset links are relative to the page, and CSS image URLs are relative to their stylesheets. This supports both the GitHub Pages project path and hosting at a domain root.
 
