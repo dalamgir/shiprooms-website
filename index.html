@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="./assets/hero-factory.css">
   <link rel="stylesheet" href="./assets/interest.css">
   <link rel="stylesheet" href="./assets/film.css">
+  <link rel="stylesheet" href="./assets/actions.css">
   <script src="./assets/site.js" defer></script>
   <script src="./assets/interest.js" defer></script>
   <script src="./assets/film.js" defer></script>
@@ -25,7 +26,7 @@
     <header class="site-header">
       <a class="brand" href="#" aria-label="Shiprooms home"><img src="./assets/mark.svg" width="33" height="33" alt=""><span>shiprooms</span></a>
       <nav aria-label="Main navigation"><a href="#vision">The vision</a><a href="#teams">For your team</a><a href="#how-it-works">The factory</a></nav>
-      <a class="header-cta" href="#early-access" >Register interest <span aria-hidden="true">↗</span></a>
+      <a class="header-cta" href="#early-access">Register interest</a>
     </header>
 
     <main id="main">
@@ -34,7 +35,7 @@
           <div class="eyebrow"><span class="status-dot"></span> AI-POWERED. HUMAN-DIRECTED. ENTERPRISE-WIDE.</div>
           <h1 id="hero-title"><span class="silver-text">AI software factory</span><br>for the enterprise.</h1>
           <p class="hero-description">People set direction and make the decisions that matter. AI agents plan, design, build, test, and operate alongside them—across one connected software lifecycle.</p>
-          <div class="hero-actions"><a class="button button-primary" href="#early-access">Register interest <span aria-hidden="true">↗</span></a><a class="text-link" href="#film">Watch the film <span aria-hidden="true">▷</span></a></div>
+          <div class="hero-actions"><a class="button button-primary" href="#early-access">Register interest</a><a class="text-link" href="#film">See Shiprooms in action <svg class="action-play-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3.5 12 8l-7 4.5z"/></svg></a></div>
           <div class="launch-note"><span class="tiny-orbit" aria-hidden="true"></span> Coming soon. A new operating model for software.</div>
         </div>
 
@@ -79,7 +80,7 @@
 
       <section class="film-section" id="film" aria-labelledby="film-title">
         <div class="section-heading">
-          <div><div class="section-index">WATCH SHIPROOMS · 1 MIN 23 SEC</div><h2 id="film-title">See the factory<br><span class="muted-word">at work.</span></h2></div>
+          <div><div class="section-index">SHIPROOMS IN ACTION · 1 MIN 23 SEC</div><h2 id="film-title">See the factory<br><span class="muted-word">at work.</span></h2></div>
           <p id="film-description">People and AI agents, from defining outcomes<br>to learning in production. One connected lifecycle.</p>
         </div>
         <div class="film-frame">
@@ -88,10 +89,10 @@
             <track kind="captions" src="./assets/media/shiprooms-film-en.vtt" srclang="en" label="English">
             <p>Your browser cannot play this video. <a href="./assets/media/shiprooms-film.mp4">Watch or download the film</a>.</p>
           </video>
-          <button class="film-play" id="film-play" type="button" aria-label="Play the Shiprooms film, 1 minute 23 seconds" hidden><span class="film-play-icon" aria-hidden="true">▶</span><span>Watch the film</span><span class="film-duration">1:23</span></button>
+          <button class="film-play" id="film-play" type="button" aria-label="Play the Shiprooms overview, 1 minute 23 seconds" hidden><svg class="action-play-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3.5 12 8l-7 4.5z"/></svg><span>See Shiprooms in action</span><span class="film-duration">1:23</span></button>
         </div>
         <p class="film-error" id="film-error" role="status" hidden>Playback couldn’t start. Try the player controls or <a href="./assets/media/shiprooms-film.mp4">open the video directly</a>.</p>
-        <div class="film-meta"><span>THE SHIPROOMS PRODUCT VISION</span><a href="./assets/media/shiprooms-film.mp4" download="Shiprooms.mp4">Download the film <span aria-hidden="true">↓</span></a></div>
+        <div class="film-meta"><span>THE SHIPROOMS PRODUCT VISION</span><a href="./assets/media/shiprooms-film.mp4" download="Shiprooms.mp4">Download video <span aria-hidden="true">↓</span></a></div>
       </section>
 
       <section class="vision-section" id="vision" aria-labelledby="vision-title">
@@ -152,7 +153,7 @@
               <div class="interest-field interest-wide"><label for="interest-message">What would you like to explore? <span>(optional)</span></label><textarea id="interest-message" name="message" rows="3" maxlength="2000" placeholder="A challenge, a use case, or what caught your attention."></textarea></div>
             </div>
             <p class="interest-privacy" id="interest-privacy">By registering, you agree to be contacted about Shiprooms and early access. Your details are sent to the Shiprooms team through Formspree.</p>
-            <button class="button button-primary interest-submit" type="submit"><span class="interest-submit-label">Register interest</span><span aria-hidden="true">↗</span></button>
+            <button class="button button-primary interest-submit" type="submit"><span class="interest-submit-label">Register interest</span></button>
             <p class="interest-status" id="interest-status" role="status" aria-live="polite" aria-atomic="true"></p>
             <noscript><p class="interest-noscript">JavaScript is off. Submitting will continue to Formspree to complete your registration.</p></noscript>
           </form>
