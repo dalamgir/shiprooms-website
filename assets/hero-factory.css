@@ -1,0 +1,132 @@
+/* Isolated hero experiment; the previous hero is preserved in Git at 6f18f5c. */
+.hero-scene.factory-scene {
+  height: 490px;
+  width: 100%;
+  max-width: 580px;
+  transform: none;
+  overflow: visible;
+  display: grid;
+  align-content: center;
+  padding: 22px 12px 34px 20px;
+}
+.factory-halo {
+  position: absolute;
+  inset: 5% 0;
+  z-index: -2;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 75% 25%, #ededed48, transparent 50%), radial-gradient(ellipse at 25% 75%, #c4c4c424, transparent 60%);
+  filter: blur(30px);
+}
+.factory-backing {
+  position: absolute;
+  inset: 40px 20px 57px 29px;
+  z-index: -1;
+  border-radius: 24px;
+  border: 1px solid #ffffff30;
+  background: linear-gradient(140deg, #ffffff12, #ffffff02 60%, #ffffff08);
+  box-shadow: inset 1px 1px #ffffff38;
+}
+.backing-one { transform: rotate(-7deg) translate(2px, -7px); }
+.backing-two { transform: rotate(3deg) translate(7px, 0); opacity: .6; }
+.factory-window {
+  position: relative;
+  transform: rotate(-2deg);
+  border-radius: 19px;
+  border: 1px solid #ffffff5c;
+  background: linear-gradient(125deg, #ffffff21, #ffffff07 55%, #ffffff10);
+  -webkit-backdrop-filter: blur(30px) saturate(0);
+  backdrop-filter: blur(30px) saturate(0);
+  box-shadow: inset 1px 1px #ffffff80, inset -1px -1px #ffffff14, 0 25px 65px #0006;
+  padding: 18px;
+}
+.factory-window::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: url('/assets/frost.svg');
+  opacity: .045;
+  pointer-events: none;
+}
+.factory-titlebar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 22px; }
+.factory-titlebar>span:first-child { display: flex; align-items: center; gap: 7px; font-size: 8px; letter-spacing: 1.2px; color: #d3d3d7; }
+.factory-titlebar img { border-radius: 5px; }
+.factory-concept { font-size: 6px; letter-spacing: 1px; color: #aaaab2; border: 1px solid #ffffff26; border-radius: 4px; padding: 4px 6px; }
+.factory-collaborators { display: grid; grid-template-columns: 1fr 20px 1fr; align-items: center; }
+.factory-collaborator { display: flex; align-items: center; gap: 9px; padding: 12px 10px; border: 1px solid #ffffff33; border-radius: 10px; background: linear-gradient(130deg, #ffffff18, #ffffff05); box-shadow: inset 0 1px #ffffff2e, 0 6px 14px #0001; }
+.factory-avatar { flex-shrink: 0; display: grid; place-items: center; height: 31px; width: 31px; border-radius: 8px; border: 1px solid #ffffff30; background: linear-gradient(130deg, #ffffff20, #ffffff08); }
+.factory-avatar svg { width: 20px; height: 20px; fill: none; stroke: #e6e6e8; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+.factory-collaborator strong { display: block; font-weight: 550; font-size: 13px; }
+.factory-collaborator small { display: block; font-size: 7px; color: #bebec6; margin-top: 5px; white-space: nowrap; }
+.factory-partnership { text-align: center; font-size: 16px; color: #a5a5ad; }
+.factory-connections { height: 19px; display: flex; justify-content: space-around; }
+.factory-connections span { width: 1px; background: linear-gradient(#ffffff60, #ffffff25); position: relative; }
+.factory-connections span::after { content: ''; position: absolute; bottom: -1px; width: 4px; height: 4px; border-right: 1px solid #d0d0d0; border-bottom: 1px solid #d0d0d0; transform: translateX(-2px) rotate(45deg); }
+.factory-context { display: flex; align-items: center; gap: 11px; border: 1px solid #ffffff3c; padding: 12px 14px; border-radius: 10px; background: linear-gradient(120deg, #ffffff20, #ffffff0a); box-shadow: inset 0 1px #ffffff38; }
+.factory-context>svg { width: 22px; height: 22px; fill: none; stroke: #dedee2; stroke-width: 1.1; stroke-linecap: round; stroke-linejoin: round; }
+.factory-context strong { display: block; font-size: 10px; font-weight: 500; color: #eaeaec; }
+.factory-context div>span { display: block; font-size: 8px; color: #b4b4bd; margin-top: 4px; }
+.factory-context-light { margin-left: auto; width: 4px; height: 4px; background: #ddd; border-radius: 50%; box-shadow: 0 0 8px #fff8; }
+.factory-feed { height: 17px; width: 1px; margin: auto; background: linear-gradient(#ffffff60, #ffffff16); }
+.factory-cycle { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 22px; padding: 4px 15px; }
+.factory-route { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke-width: 1; overflow: visible; }
+.factory-track { stroke: #ffffff25; }
+.factory-pulse { stroke: #eee; stroke-dasharray: 25 1200; animation: factory-travel 14s linear infinite; opacity: .65; }
+.factory-station { position: relative; padding: 10px 8px; min-width: 0; border: 1px solid #ffffff30; border-radius: 9px; background: linear-gradient(140deg, #49494c, #2c2d30 65%); box-shadow: inset 0 1px #ffffff22, 0 4px 10px #0002; }
+.factory-station>span { float: right; font-size: 6px; color: #a6a6b0; margin-top: 3px; }
+.factory-station strong { display: block; font-size: 11px; font-weight: 500; color: #eeeeef; }
+.factory-station small { display: block; font-size: 7px; color: #aaaab5; margin-top: 5px; white-space: nowrap; }
+.factory-arrow { position: absolute; font-size: 10px; color: #b8b8bf; transform: translate(-50%, -50%); }
+.arrow-top-one { left: 33.33%; top: 25%; }
+.arrow-top-two { left: 66.66%; top: 25%; }
+.arrow-bottom-one { left: 33.33%; top: 75%; }
+.arrow-bottom-two { left: 66.66%; top: 75%; }
+.factory-caption { display: flex; align-items: center; justify-content: center; gap: 7px; font-size: 8px; color: #b4b4bd; margin-top: 18px; }
+.factory-loop-symbol { font-size: 14px; color: #d8d8dc; }
+.factory-signature { position: absolute; bottom: 12px; left: 0; width: 100%; display: flex; align-items: center; justify-content: center; gap: 7px; font-size: 6px; letter-spacing: 1.3px; color: #868692; }
+.factory-signature span { width: 3px; height: 3px; background: #b5b5bd; border-radius: 50%; }
+@keyframes factory-travel { to { stroke-dashoffset: -1225; } }
+@media (max-width: 1150px) and (min-width: 901px) {
+  .hero-scene.factory-scene { padding: 22px 4px 34px 10px; }
+  .factory-window { padding: 13px; }
+  .factory-collaborator { padding: 10px 7px; gap: 6px; }
+  .factory-avatar { width: 25px; height: 29px; }
+  .factory-collaborator small { font-size: 6px; }
+  .factory-cycle { gap: 16px 16px; padding: 4px 8px; }
+}
+@media (max-width: 900px) {
+  .hero-scene.factory-scene { max-width: 540px; margin-top: 32px; }
+}
+@media (max-width: 600px) {
+  .hero-scene.factory-scene { height: 435px; padding: 18px 5px 30px; margin-top: 25px; }
+  .factory-backing { inset: 34px 10px 49px; border-radius: 20px; }
+  .factory-window { padding: 13px; border-radius: 16px; transform: rotate(-1deg); }
+  .factory-titlebar { margin-bottom: 17px; }
+  .factory-titlebar>span:first-child { font-size: 6px; letter-spacing: .8px; }
+  .factory-concept { font-size: 5px; letter-spacing: .6px; }
+  .factory-collaborators { grid-template-columns: 1fr 14px 1fr; }
+  .factory-collaborator { gap: 6px; padding: 10px 7px; }
+  .factory-avatar { width: 23px; height: 27px; border-radius: 6px; }
+  .factory-avatar svg { width: 17px; height: 17px; }
+  .factory-collaborator strong { font-size: 11px; }
+  .factory-collaborator small { font-size: 5.5px; }
+  .factory-context { padding: 11px; }
+  .factory-context strong { font-size: 9px; }
+  .factory-context div>span { font-size: 7px; }
+  .factory-cycle { gap: 16px 15px; padding: 4px 7px; }
+  .factory-station { padding: 10px 6px; }
+  .factory-station strong { font-size: 10px; }
+  .factory-station small { font-size: 5.5px; }
+  .factory-station>span { font-size: 5px; }
+  .factory-caption { font-size: 7px; margin-top: 15px; }
+  .factory-signature { font-size: 5px; letter-spacing: .9px; bottom: 6px; }
+}
+@media (max-width: 360px) {
+  .lifecycle-strip>div { gap: 5px; font-size: 10px; }
+  .factory-window { padding: 10px; }
+  .factory-collaborator { flex-direction: column; align-items: flex-start; gap: 7px; }
+  .factory-station small { white-space: normal; min-height: 14px; line-height: 1.4; }
+  .hero-scene.factory-scene { height: 475px; }
+}
+@media (prefers-reduced-motion: reduce) { .factory-pulse { animation: none; } }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .factory-window { background-color: #333437; } }
