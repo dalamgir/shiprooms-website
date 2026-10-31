@@ -3,28 +3,28 @@ const SIGNUP_URL = '';
 
 const stages = {
   context: {
-    eyebrow: 'THE FOUNDATION', title: 'Context that compounds.',
-    description: 'Every requirement, decision, and conversation builds on the last. Your team starts with understanding, every time.',
-    items: [['↗', 'YOUR INTENT', 'Make team planning feel effortless.', 'Captured'], ['≡', 'SHARED UNDERSTANDING', 'Requirements, with the reasoning attached.', 'Connected'], ['✓', 'EVERY NEXT STEP', 'Grounded in what you actually decided.', 'Traceable']],
-    note: 'Ask “why?” and follow the thread back to its source.'
+    eyebrow: 'THE FOUNDATION', title: 'Shared context. Across teams.',
+    description: 'Connect business goals, requirements, architecture, and decisions so every discipline works from the same understanding.',
+    items: [['↗', 'BUSINESS INTENT', 'Simplify customer onboarding across products.', 'Captured'], ['≡', 'SHARED UNDERSTANDING', 'Scope, dependencies, and accountable owners.', 'Connected'], ['✓', 'EVERY NEXT STEP', 'Implementation linked to approved decisions.', 'Traceable']],
+    note: 'Keep the reasoning connected as work moves between teams.'
   },
   team: {
-    eyebrow: 'THE COLLABORATION', title: 'Specialists. Not silos.',
-    description: 'One coordinating agent keeps the team moving. Specialists design, build, and review—with a shared understanding of the goal.',
-    items: [['◇', 'COORDINATE', 'Turn the goal into a connected delivery plan.', 'Plan'], ['⌘', 'CREATE', 'Design and engineering work in step.', 'Build'], ['✓', 'CHALLENGE', 'Independent review, with findings you can inspect.', 'Verify']],
-    note: 'Talk to one coordinator. Reach a specialist whenever you need.'
+    eyebrow: 'THE COLLABORATION', title: 'Many disciplines. One plan.',
+    description: 'People and specialist agents work toward shared milestones, with dependencies visible and independent work moving in parallel.',
+    items: [['◇', 'ALIGN', 'Product, design, and architecture establish direction.', 'Plan'], ['⌘', 'EXECUTE', 'Engineering and agents carry approved work forward.', 'Build'], ['✓', 'REVIEW', 'Quality and security challenge the work with evidence.', 'Verify']],
+    note: 'Coordination belongs in the factory, not in a chain of status meetings.'
   },
   direction: {
-    eyebrow: 'THE HUMAN ELEMENT', title: 'Your judgment. In the loop.',
-    description: 'Spend your attention on decisions that shape the product. See what needs you, why it matters, and what happens next.',
-    items: [['↗', 'SEE THE TRADEOFFS', 'Compare design directions and recommendations.', 'Review'], ['⊙', 'MAKE THE CALL', 'Approve the direction. Refine what needs work.', 'Decide'], ['✓', 'KEEP WORK MOVING', 'Independent work continues around the decision.', 'Continue']],
-    note: 'Clear approvals. Visible blockers. No guessing what you agreed to.'
+    eyebrow: 'THE HUMAN ELEMENT', title: 'Authority stays with your team.',
+    description: 'Bring the right decisions to the right people. Required approvals, specialist findings, and unresolved risks stay visible.',
+    items: [['↗', 'ROUTE THE DECISION', 'Role-based reviews with clear, accountable owners.', 'Review'], ['⊙', 'ASSESS THE EVIDENCE', 'Inspect tradeoffs, findings, and remaining risks.', 'Decide'], ['✓', 'AUTHORIZE THE NEXT STEP', 'Preserve required sign-offs as work moves forward.', 'Approve']],
+    note: 'A completed task is not a release approval. Readiness needs evidence.'
   },
   delivery: {
     eyebrow: 'THE FOLLOW-THROUGH', title: 'Launch is a beginning.',
-    description: 'The vision goes beyond deployment: verify the experience, watch production, and turn what you learn into the next improvement.',
-    items: [['✓', 'RELEASE WITH EVIDENCE', 'Acceptance criteria, checks, and a recovery plan.', 'Verify'], ['⊙', 'STAY WITH THE PRODUCT', 'Surface incidents and confirm recovery.', 'Observe'], ['↗', 'CLOSE THE LOOP', 'Bring user feedback back into product decisions.', 'Evolve']],
-    note: 'Your code. Your infrastructure. Your knowledge, from day one.'
+    description: 'Connect release readiness to production operations, and production learning back to product and engineering.',
+    items: [['✓', 'RELEASE WITH EVIDENCE', 'Acceptance checks, required approvals, and recovery plans.', 'Verify'], ['⊙', 'OPERATE TOGETHER', 'Surface incidents, ownership, and verified recovery.', 'Observe'], ['↗', 'CLOSE THE LOOP', 'Turn production insights into proposed improvements.', 'Evolve']],
+    note: 'The lifecycle continues after deployment—with the context intact.'
   }
 };
 

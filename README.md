@@ -1,6 +1,8 @@
 # Shiprooms
 
-A responsive coming-soon website for Shiprooms. Graphite, silver, translucent glass, and a product narrative built around shared context and the full software lifecycle.
+A responsive coming-soon website for Shiprooms, positioned as an AI software factory for large enterprise teams. Graphite, silver, translucent glass, and a product narrative spanning business intent, cross-functional collaboration, human accountability, and production operations.
+
+The audience includes product and business, design and research, engineering and architecture, quality, security/risk/compliance, platform and operations, delivery management, and technology/business leadership. Messaging describes the product vision; it does not claim shipped enterprise capabilities or compliance certifications.
 
 ## Local development
 
