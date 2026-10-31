@@ -1,6 +1,8 @@
 # Shiprooms
 
-A responsive coming-soon website for Shiprooms, positioned as an AI software factory for large enterprise teams. Graphite, silver, translucent glass, and a product narrative spanning business intent, cross-functional collaboration, human accountability, and production operations.
+A responsive coming-soon website for Shiprooms, positioned as an AI software factory for the enterprise. Graphite, silver, translucent glass, and a product narrative spanning business intent, cross-functional collaboration, human accountability, and production operations.
+
+The interactive lifecycle walkthrough covers Define, Design, Build, Verify, Ship, and Evolve. Each stage explains the roles of people and AI agents and the shared result.
 
 The audience includes product and business, design and research, engineering and architecture, quality, security/risk/compliance, platform and operations, delivery management, and technology/business leadership. Messaging describes the product vision; it does not claim shipped enterprise capabilities or compliance certifications.
 
