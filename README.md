@@ -27,6 +27,16 @@ The build copies the website into `dist/`, ready for a static host. `index.html`
 
 Set `SIGNUP_URL` at the top of `assets/site.js` to a published HTTPS form URL. This changes the header and hero buttons to early-access links and reveals the closing signup button. Without a URL, the site presents an honest coming-soon state and collects no personal data.
 
+## GitHub Pages deployment
+
+The `.github/workflows/deploy-pages.yml` workflow checks and builds the site on every push to `main`, then deploys only `dist/` to GitHub Pages. It can also be run manually from the repository’s Actions tab. No third-party hosting account or deployment secret is needed.
+
+Repository Settings → Pages → Build and deployment should use **GitHub Actions** as the source. The default project URL is https://dalamgir.github.io/shiprooms-website/.
+
+HTML asset links are relative to the page, and CSS image URLs are relative to their stylesheets. This supports both the GitHub Pages project path and hosting at a domain root.
+
+To publish an update, commit the source changes and push `main`. Watch **Deploy Shiprooms to GitHub Pages** in Actions for the result. The existing private Sites preview is managed separately.
+
 ## Design and accessibility
 
 - Responsive layouts for mobile, tablet, and desktop.

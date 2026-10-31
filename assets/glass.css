@@ -154,7 +154,7 @@ body {
 
 .room-card::after,
 .workspace-glass::after {
-  background: url('/assets/frost.svg');
+  background: url('./frost.svg');
   opacity: .055;
   mix-blend-mode: screen;
 }

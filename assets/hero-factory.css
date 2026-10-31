@@ -44,7 +44,7 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: url('/assets/frost.svg');
+  background: url('./frost.svg');
   opacity: .045;
   pointer-events: none;
 }
