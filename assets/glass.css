@@ -1,0 +1,234 @@
+/* Silver light, translucent graphite, and etched glass surfaces. */
+:root {
+  --glass-edge: rgba(255, 255, 255, .26);
+  --glass-highlight: rgba(255, 255, 255, .58);
+  --glass-shadow: 0 24px 64px #0005, inset 0 1px 0 #ffffff38, inset 0 -1px 0 #ffffff0a;
+}
+
+body {
+  background:
+    radial-gradient(ellipse 800px 600px at 90% 12%, #c8c8c80b, transparent 75%),
+    radial-gradient(ellipse 900px 500px at 0% 48%, #a0a0a009, transparent 75%),
+    #101113;
+}
+
+.site-header {
+  position: relative;
+  z-index: 4;
+  height: 76px;
+  margin-top: 24px;
+  padding: 0 24px;
+  border: 1px solid var(--glass-edge);
+  border-radius: 18px;
+  background: linear-gradient(115deg, #ffffff12, #ffffff04 50%, #ffffff09);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  box-shadow: var(--glass-shadow);
+}
+
+.header-cta,
+.coming-soon-note {
+  border-color: #ffffff32;
+  background: linear-gradient(120deg, #ffffff1c, #ffffff08);
+  box-shadow: inset 0 1px 0 #ffffff26, 0 4px 16px #0002;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+.header-cta:hover { background: linear-gradient(120deg, #ffffff29, #ffffff10); }
+.button-primary { border-radius: 10px; }
+.silver-text { background-image: linear-gradient(115deg, #fff 5%, #e6e6e6 30%, #929292 66%, #dedede 100%); }
+
+/* Real shapes behind the cards give the backdrop blur something to refract. */
+.scene-glow {
+  background: radial-gradient(ellipse, #dddddd32, #bbbbbb0b 55%, transparent 72%);
+  filter: blur(16px);
+}
+
+.scene-glow::before,
+.scene-glow::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.scene-glow::before {
+  width: 65%;
+  height: 65%;
+  top: 4%;
+  right: 0;
+  background: radial-gradient(circle at 30% 25%, #ffffffb0, #b4b4b445 35%, #6868680d 70%);
+  box-shadow: inset 2px 2px 20px #ffffff66, 0 0 70px #ffffff12;
+}
+
+.scene-glow::after {
+  width: 78%;
+  height: 22%;
+  left: 2%;
+  bottom: 17%;
+  transform: rotate(-34deg);
+  background: linear-gradient(90deg, transparent, #e4e4e482, transparent);
+  filter: blur(12px);
+}
+
+.scene-grid { opacity: .6; }
+.orbital { border-color: #ffffff1d; }
+
+.glass-slab {
+  border-color: #ffffff45;
+  border-radius: 24px;
+  background: linear-gradient(125deg, #ffffff28, #ffffff05 42%, #ffffff15 90%);
+  box-shadow: inset 1px 1px 0 #ffffff55, inset -1px -1px 0 #ffffff14, 5px 10px 24px #0002;
+}
+
+.slab-back { opacity: .65; }
+.slab-middle { opacity: .9; }
+
+.room-card {
+  border-color: #ffffff63;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #ffffff27, #bcbcbc0e 42%, #30303030 72%, #ffffff1c);
+  -webkit-backdrop-filter: blur(32px) saturate(0);
+  backdrop-filter: blur(32px) saturate(0);
+  box-shadow:
+    inset 1px 1px 0 #ffffff8a,
+    inset -1px -1px 0 #ffffff25,
+    inset 0 0 30px #ffffff06,
+    0 28px 70px #0007,
+    0 0 34px #ffffff05;
+}
+
+.room-card::before,
+.room-card::after,
+.workspace-glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.room-card::before {
+  background: linear-gradient(125deg, #ffffff18, transparent 28%, transparent 61%, #ffffff08 62%, transparent 88%);
+}
+
+.room-card::after,
+.workspace-glass::after {
+  background: url('/assets/frost.svg');
+  opacity: .055;
+  mix-blend-mode: screen;
+}
+
+.room-intent strong { color: #fff; text-shadow: 0 2px 14px #0002; }
+.scene-kicker, .room-foot { color: #c0c0c5; }
+.agent-line span { color: #bdbdc4; }
+.room-rule { background: linear-gradient(90deg, #ffffff52, #ffffff06); }
+.room-foot { border-color: #ffffff26; }
+
+.floating-tag {
+  border-color: #ffffff58;
+  border-radius: 13px;
+  background: linear-gradient(125deg, #ffffff24, #88888816 55%, #ffffff0e);
+  -webkit-backdrop-filter: blur(28px) saturate(0);
+  backdrop-filter: blur(28px) saturate(0);
+  box-shadow: inset 1px 1px 0 #ffffff70, inset -1px -1px 0 #ffffff14, 0 16px 36px #0006;
+  color: #ceced2;
+}
+
+.floating-tag strong { color: #f4f4f4; }
+.agent-icon, .product-icon, .evidence-icon {
+  background: linear-gradient(135deg, #ffffff2b, #ffffff07);
+  border-color: #ffffff36;
+  box-shadow: inset 0 1px 0 #ffffff42, 0 4px 12px #0002;
+}
+
+/* Light travels behind a single large frosted workspace. */
+.workspace-section { position: relative; isolation: isolate; }
+.workspace-section::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 240px;
+  right: 0;
+  width: 80%;
+  height: 430px;
+  background:
+    radial-gradient(ellipse at 80% 20%, #dcdcdc3b, transparent 50%),
+    radial-gradient(ellipse at 25% 90%, #cecece1c, transparent 55%);
+  filter: blur(35px);
+  pointer-events: none;
+}
+
+.workspace-glass {
+  position: relative;
+  border-color: #ffffff40;
+  border-radius: 20px;
+  background: linear-gradient(125deg, #ffffff16, #ffffff05 45%, #ffffff0b);
+  -webkit-backdrop-filter: blur(36px) saturate(0);
+  backdrop-filter: blur(36px) saturate(0);
+  box-shadow: inset 1px 1px 0 #ffffff5c, inset -1px -1px 0 #ffffff0f, 0 30px 70px #0005;
+}
+
+.window-bar { background: linear-gradient(100deg, #ffffff0e, #ffffff02); border-color: #ffffff23; color: #b5b5bf; }
+.window-controls i { background: linear-gradient(#c2c2c2, #6c6c6c); box-shadow: 0 1px 3px #0003; }
+.workspace-sidebar { background: #10111330; border-color: #ffffff1b; }
+.stage-tab[aria-selected=true] {
+  background: linear-gradient(115deg, #ffffff20, #ffffff08);
+  border-color: #ffffff2e;
+  box-shadow: inset 0 1px 0 #ffffff20, 0 4px 14px #0002;
+}
+.evidence-item {
+  background: linear-gradient(120deg, #ffffff0d, #ffffff03);
+  border-color: #ffffff20;
+  box-shadow: inset 0 1px 0 #ffffff0b;
+  border-radius: 10px;
+}
+.workflow-panel>p { color: #b1b1bb; }
+.evidence-item strong { color: #e0e0e5; }
+.evidence-item small, .panel-footnote { color: #a0a0ac; }
+
+.early-access {
+  margin: 110px 0 64px;
+  padding: 80px 24px;
+  border: 1px solid #ffffff30;
+  border-radius: 24px;
+  background: linear-gradient(125deg, #ffffff0e, #ffffff03 55%, #ffffff09);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  box-shadow: inset 1px 1px 0 #ffffff3b, 0 25px 60px #0003;
+}
+.access-glow {
+  width: 100%;
+  left: 0;
+  top: -70%;
+  height: 700px;
+  background: radial-gradient(ellipse at 50% 50%, #e0e0e029, transparent 58%);
+}
+
+@media (max-width: 900px) {
+  .site-header { padding: 0 18px; }
+  .early-access { margin-top: 80px; padding: 65px 20px; }
+}
+
+@media (max-width: 600px) {
+  .site-header { height: 66px; margin-top: 16px; padding: 0 13px; border-radius: 15px; }
+  .site-header .brand { font-size: 19px; gap: 5px; }
+  .site-header .brand img { width: 25px; height: 25px; }
+  .header-cta { padding: 9px 8px; font-size: 9px; }
+  .header-cta span { margin-left: 5px; }
+  .room-card, .glass-slab { border-radius: 20px; }
+  .floating-tag { border-radius: 10px; }
+  .tag-context { left: 10px; }
+  .tag-review { right: 12px; }
+  .workspace-glass { border-radius: 15px; }
+  .workspace-section::before { top: 300px; height: 450px; }
+  .early-access { margin: 55px 0 42px; padding: 56px 16px; border-radius: 20px; }
+  .early-access h2 { font-size: 29px; letter-spacing: -1.2px; }
+  .early-access p { font-size: 11px; }
+}
+
+/* Preserve readable surfaces in browsers without backdrop filtering. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .room-card, .floating-tag { background-color: #414143; }
+  .site-header, .workspace-glass, .early-access { background-color: #232426; }
+}
