@@ -70,3 +70,8 @@
 @media (prefers-reduced-motion: reduce) {
   .button-primary { transition: none; }
 }
+
+/* SVG direction cues keep the same shape on every platform. */
+.inline-arrow { display: block; width: 14px; height: 14px; flex-shrink: 0; }
+.lifecycle-chevron { display: block; width: 10px; height: 10px; color: #777b84; flex-shrink: 0; }
+@media (max-width: 600px) { .lifecycle-chevron { width: 8px; height: 8px; } }
