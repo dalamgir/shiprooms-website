@@ -267,6 +267,33 @@ body {
   .early-access p { font-size: 11px; }
 }
 
+/* A shared silver-line icon system for the three product principles. */
+.principles .principle-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 18px;
+  border: 1px solid #ffffff24;
+  border-radius: 11px;
+  background: #ffffff04;
+  color: #d7d9df;
+}
+.principle-icon svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+@media (max-width: 600px) {
+  .principles article { padding-left: 56px; }
+  .principles .principle-icon { width: 40px; height: 40px; margin-bottom: 0; }
+}
+
 /* Preserve readable surfaces in browsers without backdrop filtering. */
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .room-card, .floating-tag { background-color: #414143; }
