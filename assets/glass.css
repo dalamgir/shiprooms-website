@@ -111,7 +111,7 @@ body {
   filter: blur(12px);
 }
 
-.scene-grid { opacity: .6; }
+.scene-grid { opacity: .6; inset: 8% 0 0; transform: none; }
 .orbital { border-color: #ffffff1d; }
 
 .glass-slab {
